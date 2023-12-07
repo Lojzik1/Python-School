@@ -1,4 +1,3 @@
-
 class Produkt:
     def __init__(self, nazev):
         self.nazev = nazev
@@ -52,15 +51,15 @@ class Factory:
 factory = Factory()
 
 pocitac = factory.vyrob_pocitac("HP", "AMD Ryzen 7", "32GB")
-print(f"PC: {pocitac.nazev}, Processor: {pocitac.processor}, RAM: {pocitac.ram}")
+print(f"PC: {pocitac.nazev}\nProcessor: {pocitac.processor}\nRAM: {pocitac.ram}\n")
 
 monitor = factory.vyrob_monitor("Samsung", "27 palců", "1920x1080")
-print(f"Monitor: {monitor.nazev}, Úhlopříčka: {monitor.uhlopricka}, Rozlišení: {monitor.rozliseni}")
+print(f"Monitor: {monitor.nazev}\nÚhlopříčka: {monitor.uhlopricka}\nRozlišení: {monitor.rozliseni}\n")
 
 klavesnice = factory.vyrob_klavesnice("HyperX", "Mechanická")
-print(f"Klávesnice: {klavesnice.nazev}, Typ: {klavesnice.typ}")
+print(f"Klávesnice: {klavesnice.nazev}\nTyp: {klavesnice.typ}\n")
 
 mys = factory.vyrob_mys("Logitech", "Bezdrátová")
-print(f"Myš: {mys.nazev}, Typ: {mys.typ}")
+print(f"Myš: {mys.nazev}\nTyp: {mys.typ}\n")
 
 
