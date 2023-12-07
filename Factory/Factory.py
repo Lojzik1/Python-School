@@ -61,5 +61,3 @@ print(f"Klávesnice: {klavesnice.nazev}\nTyp: {klavesnice.typ}\n")
 
 mys = factory.vyrob_mys("Logitech", "Bezdrátová")
 print(f"Myš: {mys.nazev}\nTyp: {mys.typ}\n")
-
-
