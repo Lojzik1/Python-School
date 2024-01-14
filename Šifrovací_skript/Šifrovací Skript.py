@@ -23,7 +23,54 @@ class Cypher:
         return encrypted_text
 
     def decrypt(self, cypher_text):
+        def decrypt(self, cypher_text):
         self.__cypher_text = cypher_text
+        self.__rail = [['\n' for i in range(len(self.__cypher_text))]
+                for j in range(self.__number_of_rails)]
+     
+        dir_down = None
+        row, col = 0, 0
+
+        for i in range(len(self.__cypher_text)):
+            if row == 0:
+                dir_down = True
+            if row == self.__number_of_rails - 1:
+                dir_down = False
+         
+            self.__rail[row][col] = '*'
+            col += 1
+
+            if dir_down:
+                row += 1
+            else:
+                row -= 1
+
+        index = 0
+        for i in range(self.__number_of_rails):
+            for j in range(len(self.__cypher_text)):
+                if ((self.__rail[i][j] == '*') and
+                (index < len(self.__cypher_text))):
+                    self.__rail[i][j] = self.__cypher_text[index]
+                    index += 1
+
+        result = []
+        row, col = 0, 0
+        for i in range(len(self.__cypher_text)):
+            if row == 0:
+                dir_down = True
+
+            if row == self.__number_of_rails-1:
+                dir_down = False
+             
+            if (self.__rail[row][col] != '*'):
+                result.append(self.__rail[row][col])
+                col += 1
+             
+            if dir_down:
+                row += 1
+            else:
+                row -= 1
+        return("".join(result))
         
     def get_open_text(self):
         pass
