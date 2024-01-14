@@ -81,5 +81,5 @@ class Cypher:
     def __str__(self):
         pass
 
-print(Cypher(4).encrypt("GEEKS FOR GEEKS"))
-print(Cypher(4).decrypt("GESOGESEKFREK"))
+print(Cypher(2).encrypt("GEEKS FOR GEEKS"))
+print(Cypher(2).decrypt("GESOGESEKFREK"))
