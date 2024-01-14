@@ -23,7 +23,6 @@ class Cypher:
         return encrypted_text
 
     def decrypt(self, cypher_text):
-        def decrypt(self, cypher_text):
         self.__cypher_text = cypher_text
         self.__rail = [['\n' for i in range(len(self.__cypher_text))]
                 for j in range(self.__number_of_rails)]
