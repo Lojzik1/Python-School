@@ -30,6 +30,7 @@ class Snowfall:
         pygame.mouse.set_visible(0)
         pygame.display.flip()
         
+        #add_relative_path
         current_directory = os.getcwd()
         relative_path = os.path.join(current_directory, "Vánoční Skript", "song", "song.mp3")
         pygame.mixer.init()
